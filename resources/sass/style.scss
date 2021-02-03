@@ -4,6 +4,7 @@
 @import "partials/_common";
 
 header {
+    padding-top: $verticalPadding;
     text-align: center;
     background: #fff;
 
@@ -45,5 +46,25 @@ main {
             }
         }
     }
+}
 
+footer {
+    display: flex;
+    padding: $verticalPadding $horizontalPadding;
+    color: $footerColor;
+
+    .footer-item {
+        width: calc(100% / 3 - 20px);
+        margin: 0 10px;
+
+        .footer-title {
+            margin: 15px 0;
+        }
+
+        a {
+            display: inline-block;
+            margin: 5px 0;
+            font-weight: 700;
+        }
+    }
 }

@@ -27,11 +27,12 @@ ul.list-inline {
   display: block;
 }
 
-.section-title {
+.section-title, .footer-title {
   text-transform: uppercase;
 }
 
 header {
+  padding-top: 40px;
   text-align: center;
   background: #fff;
 }
@@ -96,4 +97,22 @@ main section .cards .card .card-layover {
 }
 main section .cards .card:hover .card-layover {
   display: flex;
+}
+
+footer {
+  display: flex;
+  padding: 40px 120px;
+  color: #7e959a;
+}
+footer .footer-item {
+  width: calc(100% / 3 - 20px);
+  margin: 0 10px;
+}
+footer .footer-item .footer-title {
+  margin: 15px 0;
+}
+footer .footer-item a {
+  display: inline-block;
+  margin: 5px 0;
+  font-weight: 700;
 }
