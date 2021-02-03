@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap');
+@import "partials/_variables";
+@import "partials/_mixins";
+@import "partials/_common";
+
+header {
+    text-align: center;
+    background: #fff;
+
+    .header-bottom {
+        margin-top: 20px;
+
+        .list-inline a {
+            display: inline-block;
+            padding: 15px 10px;
+            transition: all 0.3s;
+            &.active {
+                background: $mainColor;
+            }
+            &:hover {
+                background: $mainColor;
+            }
+        }
+    }
+}
+
+main {
+    padding: $verticalPadding $horizontalPadding;
+    background: url("../img/fondo-pag-speciali.jpg");
+    @include backgroundDefault;
+    @include darkLayover;
+    color: $textColor;
+
+    section {
+        margin: 20px 0;
+
+        .cards {
+            display: flex;
+            flex-wrap: wrap;
+
+            .card {
+                width: calc(100% / 3 - 10px);
+                margin: 5px;
+                @include cardLayover;
+            }
+        }
+    }
+
+}

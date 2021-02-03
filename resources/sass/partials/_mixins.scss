@@ -1,0 +1,41 @@
+@mixin backgroundDefault {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+@mixin darkLayover {
+    position: relative;
+    & * {
+        z-index: 1;
+    }
+    &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: #00000020;
+    }
+}
+
+@mixin cardLayover {
+    position: relative;
+
+    .card-layover {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        display: none;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        background: rgba(darken($mainColor, 30%), 0.9);
+    }
+
+    &:hover .card-layover {
+        display: flex;
+    }
+}

@@ -1,0 +1,32 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+body {
+    font-family: 'Noto Sans', sans-serif;
+}
+
+ul {
+    list-style: none;
+
+    &.list-inline {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+.img100 {
+    width: 100%;
+    display: block;
+}
+
+.section-title {
+    text-transform: uppercase;
+}
