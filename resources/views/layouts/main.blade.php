@@ -13,9 +13,7 @@
     @include("partials.header")
 
     <!-- sections -->
-    <main>
         @yield('content')
-    </main>
     <!-- /sections -->
 
     @include("partials.footer")

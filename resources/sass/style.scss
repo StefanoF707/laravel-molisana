@@ -26,10 +26,13 @@ header {
 }
 
 main {
+    &#main-home {
+        background: url("../img/fondo-pag-speciali.jpg");
+        @include backgroundDefault;
+        @include darkLayover;
+    }
+    
     padding: $verticalPadding $horizontalPadding;
-    background: url("../img/fondo-pag-speciali.jpg");
-    @include backgroundDefault;
-    @include darkLayover;
     color: $textColor;
 
     section {

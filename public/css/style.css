@@ -53,17 +53,19 @@ header .header-bottom .list-inline a:hover {
 
 main {
   padding: 40px 120px;
+  color: #002D75;
+}
+main#main-home {
   background: url("../img/fondo-pag-speciali.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
-  color: #002D75;
 }
-main * {
+main#main-home * {
   z-index: 1;
 }
-main::after {
+main#main-home::after {
   content: "";
   position: absolute;
   top: 0;

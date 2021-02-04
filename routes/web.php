@@ -177,7 +177,11 @@ Route::get('/', function () {
     $shortPasta = [];
     $shortestPasta = [];
 
-    foreach($data as $pasta) {
+    // TODO: modificare il foreach per assegnare ad ogni pasta un id numerico in base alla posizione nell'array di partenza
+
+    foreach($data as $key => $pasta) {
+        $pasta["id"] = $key;
+
         if ($pasta["tipo"] == "lunga") {
             $longPasta[] = $pasta;
         } elseif ($pasta["tipo"] == "corta") {
@@ -195,4 +199,96 @@ Route::get('/', function () {
         'links' => $links,
     ]
     );
-});
+})->name("home");
+
+Route::get('/products', function () {
+
+        $company = [
+            'Regione sociale' => "La Molisana S.P.A.",
+            'Sede legale' => "Contrada Colle delle Api, 100/A86100 - Campobasso (CB)",
+            'Pec' => "lamolisana@pec.it",
+            'Tel' => "+39 0874 4981",
+            'Fax' => "+39 0874 629584",
+        ];
+
+        $links = [
+            'pastificio' => [
+                "Il Pastificio",
+                "Grano decorticato a pietra",
+                "Il Molise c'è",
+                "Filiera Integrata",
+                "100 anni di pasta",
+                "Sartoria della pasta",
+                "Spaghetto Quadrato",
+                "Le Persone",
+            ],
+            'prodotti' => [
+                "Le Classiche",
+                "Le Integrali",
+                "Le Speciali",
+                "Le Biologiche",
+                "Le Gluten-Free",
+                "Le Semole",
+                "Le Extra di lusso",
+            ],
+            'collezione da chef' => [
+                "Collezione da Chef",
+                "Grandi Cucine",
+                "Biologiche",
+                "Quadrate"
+            ],
+        ];
+
+        return view('products', [
+        'company' => $company,
+        'links' => $links,
+    ]);
+})->name("products");
+
+Route::get('/news', function () {
+
+    $company = [
+        'Regione sociale' => "La Molisana S.P.A.",
+        'Sede legale' => "Contrada Colle delle Api, 100/A86100 - Campobasso (CB)",
+        'Pec' => "lamolisana@pec.it",
+        'Tel' => "+39 0874 4981",
+        'Fax' => "+39 0874 629584",
+    ];
+
+    $links = [
+        'pastificio' => [
+            "Il Pastificio",
+            "Grano decorticato a pietra",
+            "Il Molise c'è",
+            "Filiera Integrata",
+            "100 anni di pasta",
+            "Sartoria della pasta",
+            "Spaghetto Quadrato",
+            "Le Persone",
+        ],
+        'prodotti' => [
+            "Le Classiche",
+            "Le Integrali",
+            "Le Speciali",
+            "Le Biologiche",
+            "Le Gluten-Free",
+            "Le Semole",
+            "Le Extra di lusso",
+        ],
+        'collezione da chef' => [
+            "Collezione da Chef",
+            "Grandi Cucine",
+            "Biologiche",
+            "Quadrate"
+        ],
+    ];
+
+    return view('news', [
+        'company' => $company,
+        'links' => $links,
+    ]);
+})->name("news");
+
+// TODO: salvare i links della navbar nel database e gestire con foreach
+// TODO: passare anche alla route products l'array data e associare l'id al prodotto
+// TODO: salvare gli array data all'interno di un nuovo file .php all'interno della cartella confing, fare il return, e all' interno di questo file recuperarlo con la funzione config('nomeFile.php')
