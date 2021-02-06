@@ -10,7 +10,7 @@
                     <div class="card">
                         <img src="{{ $item["src"] }}" alt="{{ $item["titolo"] }}" class="img100">
                         <div class="card-layover animate__animated animate__flipInY">
-                            <a href="#">{{ $item["titolo"] }}</a>
+                            <a href="{{ route("products", ['id' => $item["id"]]) }}">{{ $item["titolo"] }}</a>
                         </div>
                     </div>
                 @endforeach
@@ -25,7 +25,7 @@
                     <div class="card">
                         <img src="{{ $item["src"] }}" alt="{{ $item["titolo"] }}" class="img100">
                         <div class="card-layover animate__animated animate__flipInY">
-                            <a href="#">{{ $item["titolo"] }}</a>
+                            <a href="{{ route("products", ['id' => $item["id"]]) }}">{{ $item["titolo"] }}</a>
                         </div>
                     </div>
                 @endforeach
@@ -40,8 +40,7 @@
                     <div class="card">
                         <img src="{{ $item["src"] }}" alt="{{ $item["titolo"] }}" class="img100">
                         <div class="card-layover animate__animated animate__flipInY">
-                            <a href="#">{{ $item["titolo"] }}</a>
-                            <a href="#"></a>
+                            <a href="{{ route("products", ['id' => $item["id"]]) }}">{{ $item["titolo"] }}</a>
                         </div>
                     </div>
                 @endforeach

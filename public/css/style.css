@@ -74,6 +74,33 @@ main#main-home::after {
   height: 100%;
   background: #00000020;
 }
+main#main-product {
+  background: #B8DAE6;
+  position: relative;
+}
+main#main-product .prev, main#main-product .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 20px;
+  background: #00000050;
+  font-size: 20px;
+  color: #fff;
+  transition: all 0.3s;
+  border-radius: 10px;
+}
+main#main-product .prev.next, main#main-product .next.next {
+  right: 10px;
+}
+main#main-product .prev.prev, main#main-product .next.prev {
+  left: 10px;
+}
+main#main-product .prev:hover, main#main-product .next:hover {
+  background: #000;
+}
+main#main-product p {
+  font-weight: 700;
+}
 main section {
   margin: 20px 0;
 }

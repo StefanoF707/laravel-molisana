@@ -11,7 +11,7 @@
                 <a href="{{ route("home") }}" class="{{ Route::currentRouteName() == "home" ? 'active' : '' }}">Home</a>
             </li>
             <li>
-                <a href="{{ route("products") }}" class="{{ Route::currentRouteName() == "products" ? 'active' : '' }}">Prodotti</a>
+                <a href="{{ route("products", ['id' => 0]) }}" class="{{ Route::currentRouteName() == "products" ? 'active' : '' }}">Prodotti</a>
             </li>
             <li>
                 <a href="{{ route("news") }}" class="{{ Route::currentRouteName() == "news" ? 'active' : '' }}">News</a>
